@@ -37,15 +37,16 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
     paddingTop: 15,
-    height: 161,
+    height: 131,
     marginTop: 5,
     marginLeft: 6,
     marginRight: 6,
-    width: 166,
+    width: 136,
     borderRadius: 30,
   },
   touch: {
     borderRadius: 30,
+    justifyContent: "center",
   },
   row: {
     flex: 1,
@@ -57,15 +58,15 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
   icon: {
-    height: 38.72,
-    width: 38.72,
+    height: 32.72,
+    width: 32.72,
   },
   body: {
     textAlign: "center",
     zIndex: 3,
   },
   icon2: {
-    height: 45,
+    height: 40,
     width: 45,
   },
 });

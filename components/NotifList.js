@@ -53,7 +53,7 @@ function NotifList() {
 }
 const styles = StyleSheet.create({
   list: {
-    height: 170,
+    height: 150,
   },
 });
 

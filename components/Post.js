@@ -6,14 +6,15 @@ import ProfilePicture from "./ProfilePicture";
 import effects from "../config/effects";
 import { Entypo } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
+import colors from "../config/colors";
 
 function Post() {
   return (
     <Screen>
-      <View style={[styles.container, effects.shadow]}>
+      <View style={styles.container}>
         <View style={styles.header}>
           <ProfilePicture
-            size={{ height: 70, width: 70 }}
+            size={{ height: 50, width: 50 }}
             image={require("../assets/profile.jpg")}
           />
           <View style={styles.textHeader}>
@@ -37,10 +38,15 @@ function Post() {
             style={styles.image}
           />
         </View>
-        <View style={styles.footer}>
-          <Entypo name="heart" size={40} color="black" />
-          <FontAwesome name="commenting" size={40} color="black" />
-          <Entypo name="share" size={40} color="black" />
+        <View>
+          <View style={styles.sepContainer}>
+            <View style={styles.seperator} />
+          </View>
+          <View style={styles.icons}>
+            <Entypo name="heart" size={35} color="black" />
+            <FontAwesome name="commenting" size={35} color="black" />
+            <Entypo name="share" size={35} color="black" />
+          </View>
         </View>
       </View>
     </Screen>
@@ -49,7 +55,7 @@ function Post() {
 const styles = StyleSheet.create({
   container: {
     height: 700,
-    width: "95%",
+    width: "100%",
     borderRadius: 40,
     backgroundColor: "white",
   },
@@ -75,17 +81,22 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   image: {
-    height: 300,
-    width: 300,
-    borderColor: "black",
-    borderWidth: 1,
-    borderRadius: 10,
+    height: "90%",
+    width: "100%",
   },
-  footer: {
+  seperator: {
+    height: 1,
+    width: "90%",
+    backgroundColor: colors.light,
+  },
+  icons: {
     flexDirection: "row",
     justifyContent: "space-around",
     paddingLeft: 40,
     paddingRight: 40,
+  },
+  sepContainer: {
+    alignItems: "center",
   },
 });
 export default Post;

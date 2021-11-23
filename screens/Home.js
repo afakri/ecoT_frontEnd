@@ -5,20 +5,16 @@ import Screen from "../components/Screen";
 import HomeHeader from "../components/HomeHeader";
 import NotifList from "../components/NotifList";
 import Post from "../components/Post";
-
-function Home() {
+import PostList from "../components/PostList";
+import PostSeperator from "../components/PostSeperator";
+import NavBar from "../components/NavBar";
+function Home({ navigation }) {
   return (
     <Screen>
-      <ScrollView style={styles.container}>
-        <HomeHeader name="Ayman" image={require("../assets/profile.jpg")} />
-        <NotifList />
-      </ScrollView>
+      <PostList />
+      <NavBar navigation={navigation} />
     </Screen>
   );
 }
-const styles = StyleSheet.create({
-  container: {
-    height: "100%",
-  },
-});
+
 export default Home;
